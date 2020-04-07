@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css?family=Rajdhani|Roboto+Condensed&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto Condensed";
+}
+.App {
+  background: rgb(199, 96, 207);
+  background: linear-gradient(
+    164deg,
+    rgba(199, 96, 207, 0.9582089552238806) 20%,
+    rgba(64, 64, 163, 1) 43%
+  );
+}
+p {
+  font-family: "Rajdhani";
+}
+.back {
+  transform: perspective(600px) rotateY(0deg);
+  backface-visibility: hidden;
+  background: #87ceeb url("../img/World_Map_WSF.svg.png") no-repeat center/cover;
+}
+
+.front {
+  transform: perspective(600px) rotateY(180deg);
+  backface-visibility: hidden;
+}
+.card:hover > .back {
+  transform: perspective(600px) rotateY(-180deg);
+}
+.card:hover > .front {
+  transform: perspective(600px) rotateY(0deg);
+}
+
+/* About Js */
+.col > span:nth-child(1) {
+  top: 0;
+  background-position: 30% 5%;
+}
+.col > span:nth-child(2) {
+  top: 4rem;
+  background-position: 50% 22%;
+}
+.col > span:nth-child(3) {
+  top: 0;
+  background-position: 70% 5%;
+}
+.img {
+  background: url("../img/img-pic.jpg") no-repeat;
+}
+.profile-pic {
+  height: 30rem;
+}
+
+.col > span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(12, 11, 11, 0.7);
+  transition: 0.5s linear;
+}
+.col:hover > span::before {
+  opacity: 0;
+}

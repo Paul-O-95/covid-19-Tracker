@@ -1,0 +1,124 @@
+.card {
+  // border: 1px solid #fff;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5rem;
+  justify-content: space-around;
+  margin-top: 2rem;
+  padding: 2rem;
+  box-sizing: border-box;
+
+  .card-content {
+    width: 500px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .card-body,
+    .card-info {
+      border: 1px solid #fff;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      backface-visibility: hidden;
+      transition: transform 0.6s linear;
+    }
+    .card-body {
+      transform: perspective(600px) rotateY(0deg);
+    }
+    .card-info {
+      background-color: #fff;
+      color: #333;
+      font-size: 4rem;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-weight: 700;
+      transform: perspective(600px) rotateY(180deg);
+    }
+  }
+  .card-content:hover > .card-body {
+    transform: perspective(600px) rotateY(-180deg);
+  }
+  .card-content:hover > .card-info {
+    transform: perspective(600px) rotateY(0deg);
+  }
+  &-title {
+    font-size: 4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 70px #00ff00;
+  }
+  // Text Styling
+  .t1 {
+    text-shadow: 2px 20px 100px #a20021;
+    color: #333;
+  }
+  .t4 {
+    text-shadow: 2px 20px 100px #02c802;
+    color: #333;
+  }
+  .card-5 {
+    grid-column: 1 / span 2;
+    margin: auto;
+  }
+  .img1 {
+    background: #fff url(../img/Time_zones_of_Europe_Crimea_disputed.svg)
+      no-repeat center/cover;
+  }
+  .img2 {
+    background: #868484 url(../img/World_Map_WSF.svg.png) no-repeat center/cover;
+  }
+  .img3 {
+    background: #444343 url(../img/1042847-ff5722.svg) no-repeat center/cover;
+  }
+  .img4 {
+    background: #fff
+      url(../img/World_map_of_geothermal_power_countries_installed_and_developing.svg)
+      no-repeat center/cover;
+  }
+  .img5 {
+    background: url(../img/1042847-ff5722.svg) no-repeat center/cover;
+  }
+}
+@media (max-width: 1400px) {
+  .card {
+    grid-gap: 1rem;
+    .card-content {
+      width: 100%;
+    }
+    .card-5 {
+      grid-column: 1 / span 2;
+      margin: auto;
+      width: 50%;
+    }
+    .card-title {
+      font-size: 3rem;
+    }
+  }
+}
+@media (max-width: 760px) {
+  .card {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1rem;
+
+    .card-content {
+      margin: 2rem 0;
+      width: 100%;
+      height: 500px;
+    }
+    .card-title {
+      font-size: 2rem;
+    }
+  }
+}
