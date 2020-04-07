@@ -10,7 +10,7 @@ function App() {
       headers: {
         "content-type": "application/octet-stream",
         "x-rapidapi-host": "covid-19-data.p.rapidapi.com",
-        "x-rapidapi-key": "a6fc0a08femshec59c1a0bc330d1p1feee7jsn3e4030a358da",
+        "x-rapidapi-key": "",
       },
       params: {
         format: "undefined",
