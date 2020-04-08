@@ -3,7 +3,7 @@ import Main from "./Main";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import About from "./About";
 
-function Container(props) {
+function Container({ res }) {
   return (
     <Router>
       <div className='container   box-border w-3/4 mx-auto min-h-screen text-white'>
@@ -25,7 +25,7 @@ function Container(props) {
             <About />
           </Route>
           <Route path='/'>
-            <Main data={props.res} />
+            <Main data={res} />
           </Route>
         </Switch>
       </div>

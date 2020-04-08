@@ -1,15 +1,14 @@
 import React from "react";
 import Cards from "./Cards";
 
-function Main(props) {
-  console.log(props);
+function Main({ data }) {
   return (
     <div className='content mt-12'>
       <div className='row  flex '>
         <div className='col w-1/2  mr-2 mt-32'>
           <h2 className='font-bold leading-normal text-4xl mb-16 text-center'>
             What is Covid-19? A short definition <br />
-            <i className='fas fa-long-arrow-alt-down'></i>
+            <i className='fas fa-long-arrow-alt-down' />
           </h2>
           <p className='font-thin mb-16'>
             Acoording to{" "}
@@ -39,16 +38,16 @@ function Main(props) {
               className='w-full h-16 p-8 border rounded-full bg-white outline-none text-black'
             />
             <button type='submit' className='absolute -ml-12 mt-4'>
-              <i className='fas fa-long-arrow-alt-right text-teal-300 text-4xl'></i>
+              <i className='fas fa-long-arrow-alt-right text-teal-300 text-4xl' />
             </button>
           </form>
         </div>
         <div className='col w-1/2 ml-2 text-center'>
           <Cards
-            confirmed={props.data}
-            recovered={props.data[0]}
-            critical={props.data[0]}
-            deaths={props.data[0]}
+            confirmed={data.confirmed}
+            recovered={data.recovered}
+            critical={data.critical}
+            deaths={data.deaths}
           />
         </div>
       </div>
