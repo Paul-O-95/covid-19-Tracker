@@ -22,17 +22,17 @@ function About() {
                 href='mailto:pauleke95@outlook.com?subject=Hi there!&body=So, I just
           saw your personal website and...'
               >
-                <i class='far fa-envelope fa-2x z-10'></i>
+                <i className='far fa-envelope fa-2x z-10'></i>
               </a>
             </span>
             <span className='border rounded-full w-16 h-16 flex items-center justify-center text-gray-500 hover:bg-teal-400 hover:text-white transition duration-500 ease-linear'>
               <a href='https://github.com/Paul-O-95'>
-                <i class='fab fa-github fa-2x'></i>
+                <i className='fab fa-github fa-2x'></i>
               </a>
             </span>
             <span className='border rounded-full w-16 h-16 flex items-center justify-center text-gray-500 hover:bg-teal-400 hover:text-white transition duration-500 ease-linear'>
               <a href='https://twitter.com/dexterous_L'>
-                <i class='fab fa-twitter fa-2x'></i>
+                <i className='fab fa-twitter fa-2x'></i>
               </a>
             </span>
           </div>

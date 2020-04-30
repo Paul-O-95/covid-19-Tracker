@@ -15,7 +15,12 @@ function Cards({ confirmed, recovered, critical, deaths }) {
               Total
             </div>
             <div className='info-content m-2 w-3/4 h-16 flex justify-center items-center'>
-              {confirmed}
+              {String(
+                Number(confirmed) +
+                  Number(recovered) +
+                  Number(critical) +
+                  Number(deaths),
+              )}
             </div>
           </div>
           <div className='wrapper w-full h-20 flex flex-row items-center mt-2'>
