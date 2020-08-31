@@ -1,7 +1,7 @@
 import React from "react";
-import Cards from "./Cards";
+import Form from "./Form";
 
-function Main({ data }) {
+function Main({ children, text, handleChange }) {
   return (
     <div className='content mt-12'>
       <div className='row  flex '>
@@ -31,25 +31,9 @@ function Main({ data }) {
               Learn More...
             </a>
           </p>
-          <form action='' className='relative my-10'>
-            <input
-              type='text'
-              placeholder='Enter countrys name '
-              className='w-full h-16 p-8 border rounded-full bg-white outline-none text-black'
-            />
-            <button type='submit' className='absolute -ml-12 mt-4'>
-              <i className='fas fa-long-arrow-alt-right text-teal-300 text-4xl' />
-            </button>
-          </form>
+          <Form text={text} handleChange={handleChange}></Form>
         </div>
-        <div className='col w-1/2 ml-2 text-center'>
-          <Cards
-            confirmed={data.confirmed}
-            recovered={data.recovered}
-            critical={data.critical}
-            deaths={data.deaths}
-          />
-        </div>
+        <div className='col w-1/2 ml-2 text-center'>{children}</div>
       </div>
     </div>
   );

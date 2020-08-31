@@ -2,7 +2,7 @@ import React from "react";
 
 function About() {
   return (
-    <div className='container h-full mt-10'>
+    <div className='container mt-10'>
       <div className='row flex'>
         <div className='profile-pic col flex  m-auto p-8'>
           <span className='img w-24 bg-white mx-1 relative'></span>
@@ -11,10 +11,10 @@ function About() {
         </div>
         <div className='col w-1/2 flex-col flex justify-center px-4'>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Praesentium, est porro voluptatibus mollitia dolores similique neque
-            ea. Delectus recusandae quis totam quae, labore odio obcaecati
-            quidem praesentium nihil atque quod?
+            Just a very funky developer trying to tech the world into a better
+            place. MongoDB, Express, React, Svelte and Node are a few of the
+            stack I work with. Click below to find out more information about
+            me.
           </p>
           <div className='contact flex justify-around items-center mt-10'>
             <span className='border rounded-full w-16 h-16 flex items-center justify-center text-gray-500 hover:bg-teal-400 hover:text-white transition duration-500 ease-linear'>
